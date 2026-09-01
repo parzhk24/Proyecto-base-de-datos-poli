@@ -7,6 +7,7 @@ from models.entities.User import User
 from flask_login import LoginManager, login_user, logout_user
 from flask_mail import Mail,Message
 musicalApp = Flask(__name__)
+musicalApp.config.from_object(config['development'])
 musicalApp.config['MAIL_SERVER'] = 'smtp.gmail.com'
 musicalApp.config['MAIL_PORT'] = 587
 musicalApp.config['MAIL_USE_TLS'] = True
